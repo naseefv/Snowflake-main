@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS DEMO;
+
+
+CREATE SCHEMA IF NOT EXISTS PUBLIC;
+
+
+-- Set the database and schema context
+USE SCHEMA DEMO.PUBLIC;
+
+
+-- Create the views
+Create view TIME_DEMO_VW as
+select 
+  GENDER, 
+  TRIPDURATION, 
+  DESTINATION_STATION_ID as Station_Id,
+  DESTINATION_STATION_NAME as Station_Name
+from DEMO.PUBLIC.TIME_DEMO_V8;
